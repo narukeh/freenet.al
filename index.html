@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Image Display</title>
-	<style>
-	body{
-	background-image:url("./freenet.jpg");
-	background-size:contain;
-	background-size:1000px
-	}
-	</style>
+
+<meta charset="UTF-8">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+<title>Image Display</title>
+<style>
+body{
+/* Për pamjen në desktop */
+@media (min-width: 768px) {
+  .elementi-juaj {
+    background-image: url('freenet.jpg'), url('freenet.jpg');
+    background-repeat: no-repeat;
+    background-size: auto; /* Nuk ndryshon madhësia e imazhit */
+    background-position: left top, right top; /* Vendosja e imazheve */
+  }
+}
+
+/* Për pamjen në telefon */
+@media (max-width: 767px) {
+  .elementi-juaj {
+    background-image: url('freenet.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; /* Stretch në të gjitha drejtimet */
+  }
+}
+}
+</style>
 </head>
 
 <body>
